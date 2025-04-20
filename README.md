@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Set up PostgreSQL
+
+Create a new database (e.g., jobboard)
+
+Update .env.local with your credentials:
+DATABASE_URL="postgresql://username:password@localhost:5432/jobboard?schema=public"
+JWT_SECRET="your-secure-secret-key"
+
+Run database migrations
+npx prisma migrate dev --name init
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
